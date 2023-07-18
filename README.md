@@ -5,7 +5,7 @@ We propose a YOLO algorithm for the detection of foreign objects in Chest X-Ray 
 
 ## Dataset
 The dataset we used is collected from about 300 township hospitals in China. 12 medically-trained radiologists with 1 to 3 years of experience annotated all the images. Each annotator manually annotates the potential foreign objects on a given chest X-ray presented within the lung field. Foreign objects were annotated with bounding boxes, bounding ellipses, or masks depending on the shape of the objects. The dataset consists of 5000 frontal chest X-ray images with foreign objects presented and 5000 frontal chest X-ray images without foreign objects.\
-A typical frontal chest X-ray with a foreign object present looks like [Figure 1](http://url/to/img.png)
+A typical frontal chest X-ray with a foreign object present looks like [Figure 1](https://github.com/DivyaMunot/Foreign-Object-Detection/blob/d9fb9a6d9f249b902843a5c2b7b76270c4c5aa9f/Figure%201.jpg)
 
 ## Data Pre-Processing
 As we planned to use the YOLO algorithm for training and YOLO only detects images in rectangles, we eliminated the objects with polygon annotations. The annotations in the given dataset were in a CSV file, hence, we created an object-level annotation text file for the entire dataset. Then, we converted the annotations to the YOLO recognizable format (x, y, w, h) for both rectangle and ellipse classes and scaled the width and height to the range of 0-1.
